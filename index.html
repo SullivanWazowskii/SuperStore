@@ -10,14 +10,15 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
   Telegram.WebApp.ready();
-  Telegram.WebApp.MainButton.setText('Test me pls').show().onClick(function () {
-        const data = JSON.stringify({msg: "test completed"});
-        Telegram.WebApp.sendData(data);
-        Telegram.WebApp.close();
-  });
+
   function myFunction(e){
     console.log("test")
     console.log(this)
+    Telegram.WebApp.MainButton.setText('Test me pls').show().onClick(function () {
+        const data = JSON.stringify({msg: "test completed"});
+        Telegram.WebApp.sendData(data);
+        Telegram.WebApp.close();
+     });
   }
 </script>
 <body>
